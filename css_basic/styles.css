@@ -1,6 +1,13 @@
 body {
   display: flex;
   flex-direction: column;
+  background-color: #f1f4fb;
+}
+header {
+  background-color: #ebfbee;
+}
+header a {
+  color: #1864ab;
 }
 main {
   display: flex;
@@ -14,4 +21,7 @@ article {
 aside {
   flex: 1;
   overflow-y: auto;
+}
+footer {
+  background-color: #ebfbee;
 }
