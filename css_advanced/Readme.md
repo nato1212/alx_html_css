@@ -2,7 +2,7 @@
 
 # Description
 
-This project is to learn advanced css.
+This project is a frontend implementation of the SchoolPage design. The goal is to practice and improve advanced CSS skills, including layout design and modern CSS features.
 
 # Technologies used include
 

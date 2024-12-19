@@ -43,12 +43,12 @@ ul a {
   color: #fff;
 }
 
-h1 {
+.register h1 {
   font-size: 120px;
   font-weight: bold;
 }
 
-h2 {
+h1 {
   font-size: 60px;
   font-weight: lighter;
 }
@@ -154,12 +154,12 @@ button {
   margin: auto;
 }
 
-.video-list h2 {
+.video-list h1 {
   font-weight: 400;
   color: #071629;
 }
 
-.video-list h2 span {
+.video-list h1 span {
   color: #c271ff;
 }
 
@@ -167,6 +167,11 @@ button {
   padding-top: 40px;
   display: flex;
   gap: 40px;
+}
+
+.tutorials-text {
+  font-size: 14px;
+  color: #9da7b4;
 }
 
 .tutorials > div {
@@ -181,6 +186,7 @@ button {
   position: relative;
   width: 255px;
   height: 154px;
+  border-radius: mixed;
 }
 
 .img-video {
@@ -230,7 +236,7 @@ button {
 
 /* Section Membership */
 .membership {
-  background-color: black;
+  background-color: #071629;
   color: #fff;
   height: 502px;
   padding-top: 30px;
@@ -301,7 +307,7 @@ button {
   line-height: 24px;
   width: 350px;
   font-weight: 100;
-  color: #75787c;
+  color: #9da7b4;
 }
 .faq p {
   font-weight: bold;
