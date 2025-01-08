@@ -9,6 +9,8 @@ body {
 }
 
 header {
+  max-width: 1000px;
+  margin: 0 auto;
   height: 100vh;
   background-image: url(images/headphones_hero_1.jpg);
   background-repeat: no-repeat;
