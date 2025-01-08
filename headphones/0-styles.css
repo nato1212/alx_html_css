@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  height: 100vh;
+  background-image: url(images/headphones_hero_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 25px;
+  padding-left: 10px;
+}
+
+.logo {
+  width: 161px;
+  margin-left: 90px;
+}
+
+.desktop-nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 150px;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding-bottom: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.header-content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 350px auto;
+  width: 700px;
+  font-size: 16px;
+  font-weight: 200;
+  opacity: 0.9;
+}
+
+.cta {
+  background-color: #ff6565;
+  opacity: 0.9;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-top: 40px;
+  margin-bottom: 70px;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  header {
+    background-position-x: 35%;
+  }
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+  }
+  .desktop-nav-list {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .menu-icon::before {
+    content: "☰";
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: block;
+  }
+
+  #menu-toggle:checked + .menu-icon::before {
+    content: "✖";
+    display: block;
+  }
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    padding: 10px;
+  }
+}
