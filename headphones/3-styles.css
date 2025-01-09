@@ -209,23 +209,23 @@ nav a {
   gap: 10px;
 }
 
-[class^="holberton-school-icon_"] {
+[class^="holberton_school-icon-ic_"] {
   font-family: "holberton_school-icon" !important;
 }
 .what-we-do-list span {
   font-size: 80px;
   color: var(--color-red);
 }
-.holberton-school-icon_sound:before {
+.holberton_school-icon-ic_sound:before {
   content: "\e90e";
 }
-.holberton-school-icon_video:before {
+.holberton_school-icon-ic_video:before {
   content: "\e910";
 }
-.holberton-school-icon_music:before {
+.holberton_school-icon-ic_music:before {
   content: "\e90d";
 }
-.holberton-school-icon_hearing:before {
+.holberton_school-icon-ic_hearing:before {
   content: "\e909";
 }
 

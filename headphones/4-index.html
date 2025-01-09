@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="2-styles.css" />
+    <link rel="stylesheet" href="4-styles.css" />
   </head>
   <body>
     <header>
@@ -121,6 +121,62 @@
           </div>
         </div>
       </section>
+      <section class="contact-us">
+        <div class="container">
+          <h1>Contact us</h1>
+          <form action="#" method="post" id="contact">
+            <div class="form-group">
+              <label for="name"></label>
+              <input type="text" name="name" placeholder="Name" id="name" />
+            </div>
+            <div class="form-group">
+              <label for="email"></label>
+              <input type="email" name="email" placeholder="Email" id="email" />
+            </div>
+            <div class="form-group">
+              <label for="message"></label>
+              <input
+                type="text"
+                name="message"
+                placeholder="Message"
+                id="message"
+              />
+            </div>
+            <button type="submit" form="contact" value="submit" class="cta">
+              Call to action
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <img
+            src="images/logo_headphones.png"
+            alt="Logo"
+            class="footer-logo"
+          />
+          <ul class="social-icon-list">
+            <li>
+              <a href="#"
+                ><span class="holberton_school-icon-ic_facebook"></span
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><span class="holberton_school-icon-ic_twitter"></span
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><span class="holberton_school-icon-ic_instagram"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <p>©headphones 2020</p>
+      </div>
+    </footer>
   </body>
 </html>
