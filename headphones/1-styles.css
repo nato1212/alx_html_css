@@ -187,7 +187,7 @@ nav a {
   padding-bottom: 100px;
 }
 
-.what-we-do-description {
+.section-description {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -196,7 +196,7 @@ nav a {
   padding-bottom: 50px;
 }
 
-.what-we-do-lists {
+.section-lists {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
@@ -229,11 +229,11 @@ nav a {
 }
 
 @media (max-width: 800px) {
-  .what-we-do-description {
+  .section-description {
     padding: 10px;
     width: auto;
   }
-  .what-we-do-lists {
+  .section-lists {
     width: 470px;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
@@ -242,7 +242,7 @@ nav a {
 }
 
 @media (max-width: 500px) {
-  .what-we-do-lists {
+  .section-lists {
     width: auto;
     margin: 0 auto;
     gap: 30px;
