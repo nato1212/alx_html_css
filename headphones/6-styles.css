@@ -1,0 +1,404 @@
+:root {
+  --font-family-base: "Source Sans Pro", sans-serif;
+  --color-white: #ffffff;
+  --color-black: #071629;
+  --color-red: #ff6565;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-black);
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+}
+
+header {
+  width: 100%;
+  height: 90vh;
+  background-image: url(images/headphones_hero_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 10px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-weight: var(--font-weight-bold);
+}
+
+p {
+  line-height: 1.4;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 25px;
+  padding-left: 10px;
+}
+
+.logo {
+  width: 161px;
+  margin-left: 90px;
+}
+
+.desktop-nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 150px;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding-bottom: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.header-content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 370px auto;
+  width: 700px;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.header-content p {
+  opacity: 0.8;
+}
+
+.cta {
+  background-color: #ff6565;
+  font-size: large;
+  opacity: 0.9;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  header {
+    background-position-x: 35%;
+    padding-bottom: 30px;
+    height: 110vh;
+  }
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+  }
+  .desktop-nav-list {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .menu-icon::before {
+    content: "☰";
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: block;
+  }
+
+  #menu-toggle:checked + .menu-icon::before {
+    content: "✖";
+    display: block;
+  }
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    padding: 10px;
+    padding-bottom: 100px;
+  }
+}
+
+/* Section What We do */
+
+.what-we-do {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-description {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 637px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.section-lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 10px;
+}
+
+.what-we-do-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+[class^="holberton_school-icon-ic_"] {
+  font-family: "holberton_school-icon" !important;
+}
+.what-we-do-list span {
+  font-size: 80px;
+  color: var(--color-red);
+}
+.holberton_school-icon-ic_sound:before {
+  content: "\e90e";
+}
+.holberton_school-icon-ic_video:before {
+  content: "\e910";
+}
+.holberton_school-icon-ic_music:before {
+  content: "\e90d";
+}
+.holberton_school-icon-ic_hearing:before {
+  content: "\e909";
+}
+
+@media (max-width: 800px) {
+  .section-description {
+    padding: 10px;
+    width: auto;
+  }
+  .section-lists {
+    width: 470px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .section-lists {
+    width: auto;
+    margin: 0 auto;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Our results */
+.our-results {
+  position: relative;
+  color: #ffffff;
+  width: 100%;
+  background-image: url(images/headphones_hero_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.section-lists {
+  padding-bottom: 50px;
+}
+
+.section-list-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.section-list-content h3 {
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.result-status {
+  position: relative;
+  width: 170px;
+  height: 150px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.section-lists {
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.section-list-content {
+  background-color: #ff6b6b;
+  color: white;
+  width: 180px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(50% 0%, 100% 35%, 82% 100%, 18% 100%, 0% 35%);
+  text-align: center;
+}
+
+/* Contact us */
+.contact-us {
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+}
+.form-group input {
+  border: none;
+  margin: 40px;
+  border-bottom: 1px solid black;
+  outline: none;
+  height: 30px;
+}
+
+.form-group input:active,
+.form-group input:hover,
+.form-group input:focus {
+  border: none;
+  border-bottom: 3px solid black;
+  outline: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  padding-right: 100px;
+}
+
+/* Footer */
+footer {
+  background-color: #071629;
+  color: white;
+}
+
+footer p {
+  text-align: center;
+  opacity: 0.8;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+.holberton_school-icon-ic_facebook:before {
+  content: "\e908";
+}
+.holberton_school-icon-ic_twitter:before {
+  content: "\e90f";
+}
+.holberton_school-icon-ic_instagram:before {
+  content: "\e90a";
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 100px;
+  padding-right: 10px;
+}
+
+.footer img {
+  align-items: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.social-icon-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+}
+
+footer span {
+  font-size: 40px;
+}
+.footer-logo {
+  width: 161px;
+}
+@media (max-width: 550px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 50px;
+  }
+}
