@@ -43,11 +43,12 @@ nav {
   align-items: center;
   padding-top: 25px;
   padding-left: 10px;
+  overflow-y: auto;
+  z-index: 9999;
 }
 
 .logo {
   width: 161px;
-  margin-left: 90px;
 }
 
 .desktop-nav-list {
@@ -64,6 +65,8 @@ nav {
   left: 150px;
   list-style: none;
   padding-left: 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .menu ul {
@@ -89,6 +92,7 @@ nav {
   font-size: 30px;
   color: white;
   cursor: pointer;
+  z-index: 1000;
 }
 
 #menu-toggle {
@@ -100,15 +104,21 @@ nav a {
   color: white;
 }
 
+nav a:hover {
+  color: #ff6565;
+  opacity: 0.9;
+}
+
 .header-content {
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 370px auto;
-  width: 700px;
+  width: auto;
   font-size: 16px;
   font-weight: 200;
+  padding: 10px;
 }
 
 .header-content p {
@@ -128,14 +138,24 @@ nav a {
   cursor: pointer;
 }
 
-@media (max-width: 750px) {
+.cta:hover {
+  background-color: red;
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
   header {
     background-position-x: 35%;
+    padding-bottom: 30px;
+    height: 110vh;
   }
   nav {
     display: flex;
     justify-content: flex-start;
     gap: 50px;
+  }
+  .logo {
+    margin-left: 80px;
   }
   .desktop-nav-list {
     display: none;
@@ -154,12 +174,26 @@ nav a {
   #menu-toggle:checked + .menu-icon::before {
     content: "✖";
     display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: scale(1.1) rotate(3deg); /* Scaling and rotating */
   }
+
+  #menu-toggle:checked ~ .content {
+    overflow: hidden;
+    position: fixed;
+  }
+  #menu-toggle:checked ~ .content nav .menu {
+    display: block;
+  }
+
+  #menu-toggle:checked ~ .content nav .menu-icon {
+    display: block;
+  }
+
   .header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: auto;
     padding: 10px;
   }
 }

@@ -14,10 +14,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   color: var(--color-black);
   font-family: var(--font-family-base);
@@ -25,28 +21,20 @@ body {
 }
 
 header {
-  width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-image: url(images/headphones_hero_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-bottom: 10px;
 }
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 h1 {
   font-weight: var(--font-weight-bold);
-}
-
-p {
-  line-height: 1.4;
 }
 
 nav {
@@ -55,11 +43,12 @@ nav {
   align-items: center;
   padding-top: 25px;
   padding-left: 10px;
+  overflow-y: auto;
+  z-index: 9999;
 }
 
 .logo {
   width: 161px;
-  margin-left: 90px;
 }
 
 .desktop-nav-list {
@@ -76,6 +65,8 @@ nav {
   left: 150px;
   list-style: none;
   padding-left: 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .menu ul {
@@ -101,6 +92,7 @@ nav {
   font-size: 30px;
   color: white;
   cursor: pointer;
+  z-index: 1000;
 }
 
 #menu-toggle {
@@ -112,15 +104,21 @@ nav a {
   color: white;
 }
 
+nav a:hover {
+  color: #ff6565;
+  opacity: 0.9;
+}
+
 .header-content {
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 370px auto;
-  width: 700px;
+  width: auto;
   font-size: 16px;
   font-weight: 200;
+  padding: 10px;
 }
 
 .header-content p {
@@ -140,7 +138,12 @@ nav a {
   cursor: pointer;
 }
 
-@media (max-width: 800px) {
+.cta:hover {
+  background-color: red;
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
   header {
     background-position-x: 35%;
     padding-bottom: 30px;
@@ -150,6 +153,9 @@ nav a {
     display: flex;
     justify-content: flex-start;
     gap: 50px;
+  }
+  .logo {
+    margin-left: 80px;
   }
   .desktop-nav-list {
     display: none;
@@ -168,14 +174,27 @@ nav a {
   #menu-toggle:checked + .menu-icon::before {
     content: "✖";
     display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: scale(1.1) rotate(3deg); /* Scaling and rotating */
   }
+
+  #menu-toggle:checked ~ .content {
+    overflow: hidden;
+    position: fixed;
+  }
+  #menu-toggle:checked ~ .content nav .menu {
+    display: block;
+  }
+
+  #menu-toggle:checked ~ .content nav .menu-icon {
+    display: block;
+  }
+
   .header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: auto;
     padding: 10px;
-    padding-bottom: 100px;
   }
 }
 
@@ -191,14 +210,19 @@ nav a {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  width: 637px;
+  width: auto;
   margin: 0 auto;
+  padding: 10px;
+
   padding-bottom: 50px;
 }
 
 .section-lists {
+  width: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
   justify-items: center;
   gap: 10px;
 }
@@ -230,19 +254,15 @@ nav a {
 }
 
 @media (max-width: 800px) {
-  .section-description {
-    padding: 10px;
-    width: auto;
-  }
   .section-lists {
     width: 470px;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 20px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
   .section-lists {
     width: auto;
     margin: 0 auto;
@@ -267,6 +287,7 @@ nav a {
 
 .section-lists {
   padding-bottom: 50px;
+  align-items: center;
 }
 
 .section-list-content {
