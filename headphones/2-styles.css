@@ -258,7 +258,7 @@ nav a:hover {
   content: "\e909";
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .section-lists {
     width: 470px;
     margin: 0 auto;
