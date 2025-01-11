@@ -327,6 +327,12 @@ nav a:hover {
   text-align: center;
   padding-top: 100px;
 }
+
+#contact {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 .form-group input {
   border: none;
   margin: 40px;
